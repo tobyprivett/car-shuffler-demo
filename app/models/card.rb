@@ -6,7 +6,7 @@ class Card
   end
 
   def to_s
-    'a card'
+    "#{ @denomination.to_s.humanize } of #{ @suit.to_s.humanize }"
   end
 
 private
