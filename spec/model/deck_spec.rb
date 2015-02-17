@@ -17,4 +17,12 @@ describe Deck do
       expect(card).to be_a(Card)
     end
   end
+
+  it 'has 4 suits' do
+    expect(Deck::SUITS.length).to eql(4)
+  end
+
+  it 'has 13 denominations' do
+    expect(Deck::DENOMINATIONS.length).to eql(13)
+  end
 end
