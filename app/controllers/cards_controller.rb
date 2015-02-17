@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
   def index
-    @cards = (0..51).map{ |card| 'a card' } if params[:q] == 'shuffle'
+    @cards = Deck.new.cards
+    @cards.shuffle! if params[:q] == 'shuffle'
   end
 end
